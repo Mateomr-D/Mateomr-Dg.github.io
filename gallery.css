@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(55deg, rgb(3, 143, 15), red, rgb(4, 120, 228), rgb(3, 138, 21));
+    background-attachment: fixed;
+    background-size: 500%;
+    animation: gradi 7s infinite ease;
+   
+    color: #000000;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@keyframes gradi{
+    0%{
+        background-position: 0% 50%;
+    }
+    80%{
+        background-position: 100% 50%;
+
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+
+video{
+    border-radius: 20px;
+    width: 100%;
+   cursor:auto;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.logo {
+    color: #000000;
+    background-color: rgb(43, 141, 221);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 3px 5px 5px 3px;
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.divider {
+    height: 1px;
+    background-color: #000000;
+    margin: 20px 0 0px;
+}
+
+/* Descripción */
+.description {
+    background-color: rgb(18, 176, 238);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 3px 5px 5px 3px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 60px;
+}
+
+.gallery-item {
+    width: 110%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px ;
+    margin-top: 40px;
+    border-radius: 60px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    video{
+         width:  90%;
+         height: 700;
+         border-radius: 20px;
+
+    }
+
+    .gallery-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    }
+
+    .gallery-item img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+   
+    .description {
+
+    text-align: center;
+    max-width: 800px;
+    margin: 0  0  10px;
+    font-size: 25px;
+    line-height: 1;
+        
+    }
+    
+    .logo {
+        font-size: 150%;
+    }
+}
